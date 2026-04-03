@@ -33,9 +33,11 @@ const localSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "TextNeko | テキスト一括整形",
+  metadataBase: new URL("https://text-neko.vercel.app"),
+  title:
+    "TextNeko｜テキスト一括整形ツール（大文字小文字・スネーク⇄キャメル変換）",
   description:
-    "大文字/小文字、スネーク⇄キャメル、全角半角、スラッグ化などを一括実行",
+    "TextNekoは、テキストの大文字小文字変換、スネークケース⇄キャメルケース変換、全角半角変換、スラッグ化などを一括で行える無料Webツールです。",
 };
 
 export default function RootLayout({
@@ -50,9 +52,9 @@ export default function RootLayout({
           <div className="min-h-dvh">
             <header className="border-b bg-background/60 backdrop-blur supports-backdrop-filter:bg-background/50">
               <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
-                <h1 className="text-lg font-semibold tracking-tight">
+                <div className="text-lg font-semibold tracking-tight">
                   TextNeko <span className="ml-1">🐈</span>
-                </h1>
+                </div>
                 <nav className="text-xs text-muted-foreground">
                   Nova / shadcn
                 </nav>

@@ -105,7 +105,24 @@ export default function Page() {
 
   return (
     <>
-      <div className="sticky top-0 z-10 bg-background/80 backdrop-blur border-b">
+      <h1 className="text-xl font-bold mb-3">
+        テキストを一括で整形できるWebツール
+      </h1>
+
+      <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+        TextNekoは、テキストの一括整形をブラウザだけで行える無料Webツールです。
+        大文字小文字の変換、スネークケースとキャメルケースの相互変換、
+        全角半角変換、URL向けのスラッグ生成などを、入力してすぐに実行できます。
+      </p>
+
+      <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+        スラッグ生成では、ユーザー辞書を利用した柔軟な変換が可能です。
+        完全一致（Exact）による語句変換や、正規表現（Regex）によるルールベース変換に対応しており、
+        変換ルールはJSON形式でインポート・エクスポートできます。
+        辞書データはローカルストレージに保存され、サーバーに送信されることはありません。
+      </p>
+
+      <div className="bg-background/80 backdrop-blur border-b">
         {/* 変換オプション */}
         <TransformPanel title="Transformations">
           {/* プリセット列 */}

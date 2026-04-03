@@ -1,6 +1,7 @@
 /** 日本語→英語 用語辞書（優先度: 完全一致 > 正規表現） */
 export const JA_EN_EXACT_DEFAULT: Record<string, string> = {
   テスト: "test",
+  システム: "system",
   試験: "test",
   検証: "validation",
   検査: "inspection",
