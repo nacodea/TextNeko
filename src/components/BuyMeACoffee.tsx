@@ -1,30 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import Script from "next/script";
 
 export function BuyMeACoffeeModal() {
-  useEffect(() => {
-    // ✅ すでに読み込まれていたら何もしない
-    if (document.getElementById("buymeacoffee-widget")) return;
-
-    const script = document.createElement("script");
-    script.id = "buymeacoffee-widget";
-    script.src = "https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js";
-    script.async = true;
-
-    script.dataset.name = "BMC-Widget";
-    script.dataset.id = "nacodea"; // ← 必ず自分のID
-    script.dataset.description = "Support me";
-    script.dataset.message = "もしTextNekoが役に立ったら☕";
-    script.dataset.color = "#FFDD00";
-    script.dataset.position = "Right";
-    script.dataset.xMargin = "18";
-    script.dataset.yMargin = "18";
-
-    document.body.appendChild(script);
-
-    // ❌ cleanup では削除しない（重要）
-  }, []);
-
-  return null;
+  return (
+    <Script
+      src="https://cdn.buymeacoffee.com/1/widget.prod.min.js"
+      strategy="afterInteractive"
+      data-name="BMC-Widget"
+      data-id="nacodea"
+      data-description="Support me"
+      data-message="もしTextNekoが役に立ったら☕"
+      data-color="#FFDD00"
+      data-position="Right"
+      data-x_margin="18"
+      data-y_margin="18"
+    />
+  );
 }
