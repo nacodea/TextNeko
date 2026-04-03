@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
-import BuyMeACoffeeWidget from "@/components/BuyMeACoffee";
+import BuyMeACoffeeLink from "@/components/BuyMeACoffee";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -46,10 +46,6 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="bg-background text-foreground antialiased">
-        <div style={{ background: "red", color: "white", padding: 8 }}>
-          ROOT LAYOUT USED
-        </div>
-
         <Providers>
           <div className="min-h-dvh">
             <header className="border-b bg-background/60 backdrop-blur supports-backdrop-filter:bg-background/50">
@@ -65,9 +61,11 @@ export default function RootLayout({
             <main className="mx-auto max-w-5xl px-4 py-6">{children}</main>
             <footer className="mx-auto max-w-5xl px-4 py-8 text-xs text-muted-foreground">
               © {new Date().getFullYear()} TextNeko
+              <div className="mt-3">
+                <BuyMeACoffeeLink />
+              </div>
             </footer>
           </div>
-          <BuyMeACoffeeWidget />
         </Providers>
       </body>
     </html>
