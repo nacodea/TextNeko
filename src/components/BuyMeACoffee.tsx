@@ -4,6 +4,10 @@ import { useEffect } from "react";
 
 export default function BuyMeACoffeeWidget() {
   useEffect(() => {
+    console.log("✅ BuyMeACoffeeWidget mounted");
+
+    alert("BuyMeACoffeeWidget mounted"); // ← 一時的に入れる
+
     // すでに追加されていたら二重登録しない
     if (document.getElementById("bmc-widget")) return;
 
