@@ -120,6 +120,10 @@ export default function Page() {
         完全一致（Exact）による語句変換や、正規表現（Regex）によるルールベース変換に対応しており、
         変換ルールはJSON形式でインポート・エクスポートできます。
         辞書データはローカルストレージに保存され、サーバーに送信されることはありません。
+        <br />
+        例： 「顧客管理システム 第3回」 → customer-management-system-round-3
+        <br />
+        （ユーザー辞書で「顧客管理」→ customer-management を定義）
       </p>
 
       <div className="bg-background/80 backdrop-blur border-b">
