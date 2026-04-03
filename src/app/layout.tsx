@@ -46,6 +46,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="bg-background text-foreground antialiased">
+        <div style={{ background: "red", color: "white", padding: 8 }}>
+          ROOT LAYOUT USED
+        </div>
+
         <Providers>
           <div className="min-h-dvh">
             <header className="border-b bg-background/60 backdrop-blur supports-backdrop-filter:bg-background/50">
