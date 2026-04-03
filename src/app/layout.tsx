@@ -63,8 +63,8 @@ export default function RootLayout({
               © {new Date().getFullYear()} TextNeko
             </footer>
           </div>
+          <BuyMeACoffeeWidget />
         </Providers>
-        <BuyMeACoffeeWidget />
       </body>
     </html>
   );
