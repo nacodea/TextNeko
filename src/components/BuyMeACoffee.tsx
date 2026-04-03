@@ -1,28 +1,29 @@
 "use client";
 
-export function BuyMeACoffee() {
-  return (
-    <div
-      style={{
-        position: "fixed",
-        bottom: "24px",
-        right: "24px",
-        width: "260px",
-        height: "100px",
-        zIndex: 50,
-      }}
-    >
-      <iframe
-        src="https://www.buymeacoffee.com/widget/page/nacodea?description=Support%20me&color=%23FFDD00"
-        style={{
-          border: "none",
-          width: "100%",
-          height: "100%",
-        }}
-        sandbox="allow-popups allow-scripts allow-same-origin"
-        loading="lazy"
-        title="Buy Me a Coffee"
-      />
-    </div>
-  );
+import { useEffect } from "react";
+
+export function BuyMeACoffeeModal() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.setAttribute(
+      "src",
+      "https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js",
+    );
+    script.setAttribute("data-name", "BMC-Widget");
+    script.setAttribute("data-id", "nacodea");
+    script.setAttribute("data-description", "Support me!");
+    script.setAttribute("data-message", "もしTextNekoが役に立ったら☕");
+    script.setAttribute("data-color", "#FFDD00");
+    script.setAttribute("data-position", "Right");
+    script.setAttribute("data-x_margin", "18");
+    script.setAttribute("data-y_margin", "18");
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return null;
 }
