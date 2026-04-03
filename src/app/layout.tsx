@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
+import BuyMeACoffeeWidget from "@/components/BuyMeACoffee";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -63,6 +64,7 @@ export default function RootLayout({
             </footer>
           </div>
         </Providers>
+        <BuyMeACoffeeWidget />
       </body>
     </html>
   );

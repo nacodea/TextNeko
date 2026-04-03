@@ -1,21 +1,30 @@
 "use client";
 
-import Script from "next/script";
+import { useEffect } from "react";
 
-export function BuyMeACoffeeModal() {
-  return (
-    <Script
-      src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-      strategy="afterInteractive" // ページ描画後に読み込み
-      data-name="bmc-button"
-      data-slug="nacodea" // ←自分のユーザー名に変更
-      data-color="#FFDD00"
-      data-emoji="☕"
-      data-font="Cookie"
-      data-text="もしTextNekoが役に立ったら☕"
-      data-outline-color="#000000"
-      data-font-color="#000000"
-      data-coffee-color="#ffffff"
-    />
-  );
+export default function BuyMeACoffeeWidget() {
+  useEffect(() => {
+    const script = document.createElement("script");
+
+    script.src = "https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js";
+    script.async = true;
+
+    script.setAttribute("data-name", "BMC-Widget");
+    script.setAttribute("data-id", "nacodea"); // ← 必須
+    script.setAttribute(
+      "data-description",
+      "このツールが役に立ったら応援してもらえると嬉しいです ☕",
+    );
+    script.setAttribute("data-color", "#5F7FFF");
+    script.setAttribute("data-position", "Right");
+
+    document.body.appendChild(script);
+
+    return () => {
+      // 再マウント防止（ルーティング対応）
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return null;
 }

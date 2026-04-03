@@ -18,7 +18,6 @@ import { DictionaryEditorSheet } from "@/components/textneko/DictionaryEditorShe
 
 import { TransformChecks } from "@/components/textneko/TransformChecks";
 import { Shuffle, ArrowDownUp } from "lucide-react";
-import { BuyMeACoffeeModal } from "@/components/BuyMeACoffee";
 
 export default function Page() {
   const [dictOpen, setDictOpen] = useState(false);
@@ -245,8 +244,6 @@ export default function Page() {
 
       {/* ✅ これを div の外・Fragment 直下に置く */}
       <DictionaryEditorSheet open={dictOpen} onOpenChange={setDictOpen} />
-
-      <BuyMeACoffeeModal />
     </>
   );
 }
