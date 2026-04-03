@@ -13,7 +13,7 @@ export function BuyMeACoffeeModal() {
     script.async = true;
 
     script.dataset.name = "BMC-Widget";
-    script.dataset.id = "ユーザー名"; // ← 必ず自分のID
+    script.dataset.id = "nacodea"; // ← 必ず自分のID
     script.dataset.description = "Support me";
     script.dataset.message = "もしTextNekoが役に立ったら☕";
     script.dataset.color = "#FFDD00";
