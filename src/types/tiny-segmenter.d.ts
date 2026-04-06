@@ -3,3 +3,5 @@ declare module "tiny-segmenter" {
     segment(input: string): string[];
   }
 }
+
+declare module "*.css";

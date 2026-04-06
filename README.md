@@ -9,9 +9,11 @@ TextNeko は、開発や業務でよく使われるテキスト変換を
 
 👉 https://text-neko.vercel.app
 
-☕ 気に入っていただけたら、開発を応援してもらえると嬉しいです
+☕ 応援について
+もしこのリポジトリが役に立ったら、
+こちらの記事からチップで応援してもらえると嬉しいです。
 
-[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Support%20TextNeko&emoji=🐾&slug=nacodea&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/nacodea)
+👉 https://note.com/nacodea/n/n3b231b455f38
 
 ---
 
