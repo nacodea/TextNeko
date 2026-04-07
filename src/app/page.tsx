@@ -224,14 +224,7 @@ export default function Page() {
         </TransformPanel>
 
         {/* ===== Transform Button ===== */}
-
-        {/* ===== Transform Button ===== */}
-        <div
-          className="
-  flex h-full
-  items-center justify-center
-"
-        >
+        <div className="flex h-full items-center justify-center">
           <Button
             onClick={apply}
             disabled={transform.option === null}
